@@ -6,7 +6,7 @@ A new Flutter project.
 
 This project is a starting point for a Flutter application.
 
-Please Enable the Microphone manually for the application!! I am unable that feature.
+Please Enable the Microphone manually for the application!! I am unable to add that feature.
 
 A few resources to get you started if this is your first Flutter project:
 
