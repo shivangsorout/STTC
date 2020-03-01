@@ -1,0 +1,80 @@
+Flutter crash report; please file at https://github.com/flutter/flutter/issues.
+
+## command
+
+flutter emulators --launch Nexus_6P
+
+## exception
+
+ProcessException: ProcessException: Process exited abnormally:
+emulator: ERROR: Running multiple emulators with the same AVD is an experimental feature.
+Please use -read-only flag to enable this feature.
+  Command: C:\Users\Shivang Sorout\AppData\Local\Android\sdk\emulator\emulator.exe -avd Nexus_6P_API_22
+
+```
+#0      RunResult.throwException (package:flutter_tools/src/base/process.dart:141:5)
+#1      _DefaultProcessUtils.run (package:flutter_tools/src/base/process.dart:275:19)
+<asynchronous suspension>
+#2      AndroidEmulator.launch (package:flutter_tools/src/android/android_emulator.dart:52:52)
+<asynchronous suspension>
+#3      EmulatorsCommand._launchEmulator (package:flutter_tools/src/commands/emulators.dart:74:31)
+<asynchronous suspension>
+#4      EmulatorsCommand.runCommand (package:flutter_tools/src/commands/emulators.dart:47:13)
+<asynchronous suspension>
+#5      FlutterCommand.verifyThenRunCommand (package:flutter_tools/src/runner/flutter_command.dart:557:18)
+#6      _asyncThenWrapperHelper.<anonymous closure> (dart:async-patch/async_patch.dart:71:64)
+#7      _rootRunUnary (dart:async/zone.dart:1132:38)
+#8      _CustomZone.runUnary (dart:async/zone.dart:1029:19)
+#9      _FutureListener.handleValue (dart:async/future_impl.dart:137:18)
+#10     Future._propagateToListeners.handleValueCallback (dart:async/future_impl.dart:678:45)
+#11     Future._propagateToListeners (dart:async/future_impl.dart:707:32)
+#12     Future._completeWithValue (dart:async/future_impl.dart:522:5)
+#13     Future._asyncComplete.<anonymous closure> (dart:async/future_impl.dart:552:7)
+#14     _rootRun (dart:async/zone.dart:1124:13)
+#15     _CustomZone.run (dart:async/zone.dart:1021:19)
+#16     _CustomZone.runGuarded (dart:async/zone.dart:923:7)
+#17     _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:963:23)
+#18     _microtaskLoop (dart:async/schedule_microtask.dart:41:21)
+#19     _startMicrotaskLoop (dart:async/schedule_microtask.dart:50:5)
+#20     _runPendingImmediateCallback (dart:isolate-patch/isolate_patch.dart:116:13)
+#21     _RawReceivePortImpl._handleMessage (dart:isolate-patch/isolate_patch.dart:173:5)
+```
+
+## flutter doctor
+
+```
+[32m[✓][39m Flutter (Channel dev, v1.10.14, on Microsoft Windows [Version 10.0.18362.449], locale en-IN)
+    [32m•[39m Flutter version 1.10.14 at C:\Users\Shivang Sorout\flutter
+    [32m•[39m Framework revision 1946fc4da0 (4 weeks ago), 2019-10-07 15:23:31 -0700
+    [32m•[39m Engine revision 1d62160fdb
+    [32m•[39m Dart version 2.6.0 (build 2.6.0-dev.5.0 d6c6d12ebf)
+
+[32m[✓][39m Android toolchain - develop for Android devices (Android SDK version 29.0.2)
+    [32m•[39m Android SDK at C:\Users\Shivang Sorout\AppData\Local\Android\sdk
+    [32m•[39m Android NDK location not configured (optional; useful for native profiling support)
+    [32m•[39m Platform android-29, build-tools 29.0.2
+    [32m•[39m Java binary at: C:\Program Files\Android\Android Studio1\jre\bin\java
+    [32m•[39m Java version OpenJDK Runtime Environment (build 1.8.0_202-release-1483-b03)
+    [32m•[39m All Android licenses accepted.
+
+[32m[✓][39m Chrome - develop for the web
+    [32m•[39m Chrome at C:\Program Files (x86)\Google\Chrome\Application\chrome.exe
+
+[33m[!][39m Android Studio (version 3.5)
+    [32m•[39m Android Studio at C:\Program Files\Android\Android Studio1
+    [31m✗[39m Flutter plugin not installed; this adds Flutter specific functionality.
+    [31m✗[39m Dart plugin not installed; this adds Dart specific functionality.
+    [32m•[39m Java version OpenJDK Runtime Environment (build 1.8.0_202-release-1483-b03)
+
+[32m[✓][39m VS Code (version 1.39.2)
+    [32m•[39m VS Code at C:\Users\Shivang Sorout\AppData\Local\Programs\Microsoft VS Code
+    [32m•[39m Flutter extension version 3.6.0
+
+[32m[✓][39m Connected device (4 available)
+    [32m•[39m POCO F1                   • 76cb7a77        • android-arm64  • Android 9 (API 28)
+    [32m•[39m Android SDK built for x86 • emulator-5554   • android-x86    • Android 5.1.1 (API 22) (emulator)
+    [32m•[39m Chrome                    • chrome          • web-javascript • Google Chrome 78.0.3904.70
+    [32m•[39m Headless Server           • headless-server • web-javascript • Flutter Tools
+
+[33m![39m Doctor found issues in 1 category.
+```
