@@ -10,30 +10,27 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
-  
   Future checkFirstSeen() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     bool _seen = (prefs.getBool('seen') ?? false);
 
     if (_seen) {
-    Navigator.of(context).pushReplacement(
-        new MaterialPageRoute(builder: (context) => new NoteList()));
+      Navigator.of(context).pushReplacement(new MaterialPageRoute(builder: (context) => new NoteList()));
     } else {
-    prefs.setBool('seen', true);
-    Navigator.of(context).pushReplacement(MaterialPageRoute(
-            builder: (BuildContext context) => InsScreen("Lets Begin")));
+      prefs.setBool('seen', true);
+      Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (BuildContext context) => InsScreen(buttonname: "Lets Begin")));
     }
-}
-  
+  }
+
   @override
   void initState() {
     super.initState();
     Timer(
-        Duration(seconds: 5),
-        () => /*Navigator.of(context).pushReplacement(MaterialPageRoute(
+      Duration(seconds: 3),
+      () => /*Navigator.of(context).pushReplacement(MaterialPageRoute(
             builder: (BuildContext context) => InsScreen()))*/
-            checkFirstSeen(),
-            );
+          checkFirstSeen(),
+    );
   }
 
   @override
@@ -44,6 +41,5 @@ class _SplashScreenState extends State<SplashScreen> {
         child: Image.asset('graphics/splash.png'),
       ),
     );
-  
   }
 }

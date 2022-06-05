@@ -37,7 +37,7 @@ class NoteListState extends State<NoteList> {
           IconButton(
             icon: Icon(Icons.help),
             onPressed: () {
-              Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => InsScreen("Go Back")));
+              Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => InsScreen(buttonname: "Go Back")));
             },
           ),
         ],
@@ -55,39 +55,62 @@ class NoteListState extends State<NoteList> {
     );
   }
 
-  ListView getNoteListView() {
+  Widget getNoteListView() {
     TextStyle titleStyle = Theme.of(context).textTheme.subtitle1;
 
-    return ListView.builder(
-        padding: EdgeInsets.only(top: 10, bottom: 10),
-        itemCount: count,
-        itemBuilder: (BuildContext context, int position) {
-          return Card(
-            color: Colors.deepPurpleAccent,
-            elevation: 2.0,
-            child: ListTile(
-              leading: CircleAvatar(
-                backgroundColor: getPriorityColor(this.noteList[position].priority),
-                child: getPriorityIcon(this.noteList[position].priority),
+    return noteList.isEmpty
+        ? Center(
+            child: Container(
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Icon(
+                    Icons.add_circle,
+                    color: Colors.deepPurple,
+                    size: 30,
+                  ),
+                  SizedBox(width: 10),
+                  Text(
+                    'Add notes in the list!',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 20,
+                    ),
+                  ),
+                ],
               ),
-              title: Text(
-                this.noteList[position].title,
-                style: titleStyle,
-              ),
-              subtitle: Text(this.noteList[position].date),
-              trailing: GestureDetector(
-                child: Icon(Icons.delete, color: Colors.black),
-                onTap: () {
-                  _delete(context, noteList[position]);
-                },
-              ),
-              onTap: () {
-                debugPrint("ListTile Tapped");
-                navigateToDetail(this.noteList[position], 'Edit Note');
-              },
             ),
-          );
-        });
+          )
+        : ListView.builder(
+            padding: EdgeInsets.only(top: 10, bottom: 10),
+            itemCount: count,
+            itemBuilder: (BuildContext context, int position) {
+              return Card(
+                color: Colors.deepPurpleAccent,
+                elevation: 2.0,
+                child: ListTile(
+                  leading: CircleAvatar(
+                    backgroundColor: getPriorityColor(this.noteList[position].priority),
+                    child: getPriorityIcon(this.noteList[position].priority),
+                  ),
+                  title: Text(
+                    this.noteList[position].title,
+                    style: titleStyle,
+                  ),
+                  subtitle: Text(this.noteList[position].date),
+                  trailing: GestureDetector(
+                    child: Icon(Icons.delete, color: Colors.black),
+                    onTap: () {
+                      _delete(context, noteList[position]);
+                    },
+                  ),
+                  onTap: () {
+                    debugPrint("ListTile Tapped");
+                    navigateToDetail(this.noteList[position], 'Edit Note');
+                  },
+                ),
+              );
+            });
   }
 
   //Returns the priority color
