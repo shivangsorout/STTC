@@ -1,8 +1,12 @@
+import 'package:STTC_NOTEPAD/components/normal_button.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:STTC_NOTEPAD/models/note.dart';
 import 'package:STTC_NOTEPAD/utils/database_helper.dart';
+import 'package:permission_handler/permission_handler.dart';
+import 'package:speech_recognition/speech_recognition.dart';
 import 'MicScreen.dart';
+import 'package:app_settings/app_settings.dart';
 
 class NoteDetail extends StatefulWidget {
   final String AppBarTitle;
@@ -21,7 +25,6 @@ class _NoteDetailState extends State<NoteDetail> {
 
   String AppBarTitle;
   Note note;
-  MicScreenState m;
 
   DatabaseHelper databaseHelper = DatabaseHelper();
 
@@ -29,14 +32,35 @@ class _NoteDetailState extends State<NoteDetail> {
 
   TextEditingController titleController = TextEditingController();
   TextEditingController descriptionController = TextEditingController();
+  OutlineInputBorder borderStyle = OutlineInputBorder(borderSide: BorderSide(color: Colors.deepPurple), borderRadius: BorderRadius.circular(15.0));
+
+  // Variables for microphone
+  SpeechRecognition _speechRecognition;
+  bool _isAvailable = false;
+  bool _isListening = false;
+  Map<Permission, PermissionStatus> permissions = {};
+
+  String resultText = "";
+  String previousText = '';
+  String recordedText = '';
+  // End
 
   _NoteDetailState(this.note, this.AppBarTitle);
+
+  @override
+  void initState() {
+    setState(() {
+      titleController.text = note.title;
+      descriptionController.text = note.description;
+    });
+    getPermission();
+    initSpeechRecognizer();
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     TextStyle textStyle = Theme.of(context).textTheme.headline6;
-
-    titleController.text = note.title;
-    descriptionController.text = note.description;
 
     return Scaffold(
         appBar: AppBar(
@@ -61,58 +85,79 @@ class _NoteDetailState extends State<NoteDetail> {
     return ListView(
       children: <Widget>[
         //First element
-        ListTile(
-            title: DropdownButton(
-          items: _priorities.map((String item) {
-            return DropdownMenuItem<String>(
-              value: item,
-              child: Text(item),
-            );
-          }).toList(),
-          onChanged: (MicScreenState.resultText.length == 0 && descriptionController.text.length == 0)
-              ? null
-              : (valueSelectedByUser) {
-                  setState(() {
-                    debugPrint("User selected $valueSelectedByUser");
-                    getIntPriority(valueSelectedByUser);
-                  });
-                },
-          value: getStringPriority(note.priority),
-          style: TextStyle(color: Colors.white, fontSize: 25, backgroundColor: Colors.black),
-        )),
+        Container(
+          height: 50,
+          padding: EdgeInsets.all(10),
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.all(Radius.circular(5)),
+            border: Border.all(color: Colors.deepPurple),
+          ),
+          child: DropdownButton(
+            dropdownColor: Colors.grey[900],
+            borderRadius: BorderRadius.all(Radius.circular(10)),
+            isExpanded: true,
+            underline: SizedBox(),
+            items: _priorities.map((String item) {
+              return DropdownMenuItem<String>(
+                value: item,
+                child: Text(
+                  item,
+                  style: TextStyle(
+                    fontSize: 20,
+                    color: Colors.white,
+                  ),
+                ),
+              );
+            }).toList(),
+            onChanged: (valueSelectedByUser) {
+              setState(() {
+                debugPrint("User selected $valueSelectedByUser");
+                getIntPriority(valueSelectedByUser);
+              });
+            },
+            value: getStringPriority(note.priority),
+            style: TextStyle(color: Colors.white, fontSize: 18),
+          ),
+        ),
 
         //Second element
         Padding(
             padding: EdgeInsets.only(top: 15.0, bottom: 15.0),
             child: TextFormField(
-              enabled: (MicScreenState.resultText.length == 0 && descriptionController.text.length == 0) ? false : true,
+              enabled: true,
               controller: titleController,
-              style: TextStyle(color: Colors.white, fontSize: 25),
-              validator: getValidator(),
+              style: TextStyle(color: Colors.white, fontSize: 18),
+              validator: getValidator('Title'),
               decoration: InputDecoration(
-                  labelText: "Title",
-                  labelStyle: TextStyle(color: Colors.white, fontSize: 20),
-                  errorStyle: TextStyle(color: Colors.red, fontSize: 15.0),
-                  enabledBorder: OutlineInputBorder(borderSide: const BorderSide(color: Colors.deepPurple), borderRadius: BorderRadius.circular(15.0))),
+                labelText: "Title",
+                labelStyle: TextStyle(color: Colors.white, fontSize: 20),
+                errorStyle: TextStyle(color: Colors.red, fontSize: 15.0),
+                enabledBorder: borderStyle,
+                focusedBorder: borderStyle,
+                border: borderStyle,
+              ),
             )),
 
         //Third element
         Padding(
           padding: EdgeInsets.only(top: 15.0, bottom: 15.0),
-          child: TextField(
+          child: TextFormField(
             keyboardType: TextInputType.multiline,
-            maxLines: null,
-            enabled: (MicScreenState.resultText.length == 0 && descriptionController.text.length == 0) ? false : true,
+            maxLines: 5,
+            enabled: true,
+            validator: getValidator('Description'),
             controller: descriptionController,
-            style: TextStyle(color: Colors.white, fontSize: 25),
-            onChanged: (value) {
-              debugPrint("Description has changed");
-              updateDescription();
-            },
+            style: TextStyle(color: Colors.white, fontSize: 18),
             decoration: InputDecoration(
-                labelText: "Description",
-                labelStyle: TextStyle(color: Colors.white, fontSize: 20),
-                enabledBorder: OutlineInputBorder(borderSide: BorderSide(color: Colors.deepPurple), borderRadius: BorderRadius.circular(15.0))),
+              contentPadding: EdgeInsets.symmetric(horizontal: 15, vertical: 15),
+              alignLabelWithHint: true,
+              labelText: "Description",
+              labelStyle: TextStyle(color: Colors.white, fontSize: 20),
+              errorStyle: TextStyle(color: Colors.red, fontSize: 15.0),
+              enabledBorder: borderStyle,
+              border: borderStyle,
+              focusedBorder: borderStyle,
+            ),
           ),
         ),
 
@@ -125,75 +170,61 @@ class _NoteDetailState extends State<NoteDetail> {
                 child: Icon(Icons.mic),
                 backgroundColor: Colors.red,
                 onPressed: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (BuildContext context) => MicScreen(),
-                      ));
+                  if (permissions[Permission.speech].isGranted && permissions[Permission.speech].isGranted) {
+                    setState(() {
+                      previousText = descriptionController.text;
+                    });
+                    if (_isAvailable && !_isListening) _speechRecognition.listen(locale: "en_US").then((result) => print('RESULT: $result'));
+                  } else {
+                    getPermission();
+                    initSpeechRecognizer();
+                  }
                 },
               ),
             ])),
 
         //Fifth element
+
         Padding(
-          padding: EdgeInsets.only(top: 90),
-          child: RaisedButton(
-              color: Theme.of(context).accentColor,
-              textColor: Colors.white,
-              child: Text(
-                "Update Description",
-                textScaleFactor: 1.5,
-              ),
-              onPressed: (MicScreenState.resultText.length == 0 && descriptionController.text.length == 0)
-                  ? null
-                  : () {
-                      debugPrint("Update pressed");
-                      descriptionController.text += ' ';
-                      descriptionController.text += MicScreenState.a;
-                      descriptionController.text += ' ';
-                      updateDescription();
-                      MicScreenState.resultText = "";
-                    }),
+          padding: EdgeInsets.only(top: 15.0),
+          child: NormalButton(
+            title: 'Clear',
+            onPressed: descriptionController.text.isEmpty
+                ? null
+                : () {
+                    setState(() {
+                      recordedText = '';
+                      resultText = '';
+                      previousText = '';
+                      descriptionController.text = '';
+                    });
+                  },
+          ),
         ),
 
-        //Sixth element
+        // Sixth Element
+
         Padding(
-            padding: EdgeInsets.only(top: 22.0, bottom: 15.0),
+            padding: EdgeInsets.only(top: 15.0, bottom: 15.0),
             child: Row(
               children: <Widget>[
                 Expanded(
-                    child: RaisedButton(
-                        color: Theme.of(context).accentColor,
-                        textColor: Colors.white,
-                        child: Text(
-                          "Save",
-                          textScaleFactor: 1.5,
-                        ),
-                        onPressed: (MicScreenState.resultText.length == 0 && descriptionController.text.length == 0)
-                            ? null
-                            : () {
-                                debugPrint("Saved pressed");
-                                if (_formKey.currentState.validate()) {
-                                  _save();
-                                }
-                              })),
-                Container(
-                  width: 5.0,
+                  child: NormalButton(
+                    title: 'Save',
+                    onPressed: () {
+                      if (_formKey.currentState.validate()) {
+                        _save();
+                      }
+                    },
+                  ),
                 ),
                 Expanded(
-                    child: RaisedButton(
-                        color: Theme.of(context).accentColor,
-                        textColor: Colors.white,
-                        child: Text(
-                          "Delete",
-                          textScaleFactor: 1.5,
-                        ),
-                        onPressed: (MicScreenState.resultText.length == 0 && descriptionController.text.length == 0)
-                            ? null
-                            : () {
-                                debugPrint("Delete pressed");
-                                _delete();
-                              })),
+                    child: NormalButton(
+                  title: 'Delete',
+                  onPressed: () {
+                    _delete();
+                  },
+                )),
               ],
             ))
       ],
@@ -237,11 +268,13 @@ class _NoteDetailState extends State<NoteDetail> {
 
 //Update description of note object
   void updateDescription() {
+    if (resultText != null) descriptionController.text = resultText;
     note.description = descriptionController.text;
   }
 
   void _save() async {
     updateTitle();
+    updateDescription();
     moveToLastScreen();
 
     note.date = DateFormat.yMMMd().format(DateTime.now());
@@ -296,11 +329,52 @@ class _NoteDetailState extends State<NoteDetail> {
     Navigator.pop(context, true);
   }
 
-  FormFieldValidator<String> getValidator() {
+  FormFieldValidator<String> getValidator(String validation) {
     return (String value) {
       if (value.isEmpty) {
-        return 'Please enter a Title';
+        return 'Please enter a $validation!';
       }
     };
+  }
+
+  void initSpeechRecognizer() {
+    _speechRecognition = SpeechRecognition();
+    _speechRecognition.setAvailabilityHandler((bool result) => setState(() => _isAvailable = result));
+    _speechRecognition.setRecognitionStartedHandler(
+      () => setState(() => _isListening = true),
+    );
+    _speechRecognition.setRecognitionResultHandler((String speech) {
+      setState(() {
+        recordedText = speech;
+        resultText = previousText + (previousText != '' ? " " : "") + recordedText;
+        if (resultText != null) descriptionController.text = resultText;
+      });
+    });
+    _speechRecognition.setRecognitionCompleteHandler(
+      () => setState(() => _isListening = false),
+    );
+    _speechRecognition.activate().then(
+          (result) => setState(() => _isAvailable = result),
+        );
+  }
+
+  Future askForPermissions() async {
+    permissions = await [Permission.microphone, Permission.speech].request();
+  }
+
+  getPermission() async {
+    await askForPermissions();
+    if (permissions[Permission.microphone].isDenied || permissions[Permission.speech].isDenied) {
+      askForPermissions();
+    }
+    if (permissions[Permission.speech].isPermanentlyDenied || permissions[Permission.microphone].isPermanentlyDenied) {
+      AppSettings.openAppSettings();
+    }
+    if (permissions[Permission.speech].isGranted && permissions[Permission.microphone].isGranted) {
+      return true;
+    } else {
+      await getPermission();
+      return false;
+    }
   }
 }

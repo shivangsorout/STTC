@@ -1,3 +1,4 @@
+import 'package:STTC_NOTEPAD/components/normal_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:permission_handler/permission_handler.dart';
@@ -6,7 +7,9 @@ import 'package:STTC_NOTEPAD/models/note.dart';
 import 'package:app_settings/app_settings.dart';
 
 class MicScreen extends StatefulWidget {
-  MicScreen();
+  final String lastTimeText;
+
+  MicScreen({@required this.lastTimeText});
   @override
   State<StatefulWidget> createState() {
     return MicScreenState();
@@ -14,20 +17,23 @@ class MicScreen extends StatefulWidget {
 }
 
 class MicScreenState extends State<MicScreen> {
-  static String a;
-  TextEditingController descriptionController = TextEditingController();
-  Note note;
-  String result;
   SpeechRecognition _speechRecognition;
   bool _isAvailable = false;
   bool _isListening = false;
   Map<Permission, PermissionStatus> permissions = {};
 
-  static String resultText = "";
+  String resultText = "";
+  String previousText = '';
+  String recordedText = '';
 
   @override
   void initState() {
     super.initState();
+    if (widget.lastTimeText != null && widget.lastTimeText != "") {
+      setState(() {
+        resultText = widget.lastTimeText;
+      });
+    }
     getPermission();
     initSpeechRecognizer();
   }
@@ -39,7 +45,10 @@ class MicScreenState extends State<MicScreen> {
       () => setState(() => _isListening = true),
     );
     _speechRecognition.setRecognitionResultHandler(
-      (String speech) => setState(() => resultText = speech),
+      (String speech) => setState(() {
+        recordedText = speech;
+        resultText = previousText + (previousText != '' ? " " : "") + recordedText;
+      }),
     );
     _speechRecognition.setRecognitionCompleteHandler(
       () => setState(() => _isListening = false),
@@ -77,7 +86,7 @@ class MicScreenState extends State<MicScreen> {
         leading: IconButton(
           icon: Icon(Icons.keyboard_arrow_left),
           onPressed: () {
-            Navigator.pop(context, true);
+            Navigator.pop(context);
           },
         ),
       ),
@@ -86,8 +95,9 @@ class MicScreenState extends State<MicScreen> {
           child: ListView(
         children: <Widget>[
           Padding(
-            padding: EdgeInsets.only(top: 8.0, bottom: 15.0),
+            padding: EdgeInsets.only(top: 20.0, bottom: 15.0),
             child: Container(
+              margin: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
               width: MediaQuery.of(context).size.width * 0.8,
               decoration: BoxDecoration(
                 color: Colors.deepPurpleAccent,
@@ -98,8 +108,8 @@ class MicScreenState extends State<MicScreen> {
                 horizontal: 12.0,
               ),
               child: Text(
-                resultText,
-                style: TextStyle(fontSize: 17.0),
+                resultText == '' ? 'Press button and say something...' : resultText,
+                style: TextStyle(fontSize: 17.0, color: Colors.black),
               ),
             ),
           ),
@@ -114,24 +124,40 @@ class MicScreenState extends State<MicScreen> {
                   child: Icon(Icons.mic),
                   backgroundColor: Colors.pink,
                   onPressed: () {
+                    setState(() {
+                      previousText = resultText;
+                    });
                     if (_isAvailable && !_isListening) _speechRecognition.listen(locale: "en_US").then((result) => print('RESULT: $result'));
                   },
                 ),
               ],
             ),
           ),
-          new MaterialButton(
-              color: Theme.of(context).colorScheme.secondary,
-              textColor: Colors.white,
-              child: Text(
-                "Update",
-                textScaleFactor: 1.5,
-              ),
-              onPressed: () {
-                debugPrint("Update pressed");
-                a = "$resultText";
-                Navigator.pop(context, true);
-              })
+          if (resultText != '')
+            Row(
+              children: [
+                Expanded(
+                  child: NormalButton(
+                    title: 'Clear',
+                    onPressed: () {
+                      setState(() {
+                        recordedText = '';
+                        resultText = '';
+                        previousText = '';
+                      });
+                    },
+                  ),
+                ),
+                Expanded(
+                  child: NormalButton(
+                    title: 'Update',
+                    onPressed: () {
+                      Navigator.pop(context, resultText);
+                    },
+                  ),
+                ),
+              ],
+            ),
         ],
       )),
     );

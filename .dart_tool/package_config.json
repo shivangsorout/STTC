@@ -353,10 +353,10 @@
       "name": "STTC_NOTEPAD",
       "rootUri": "../",
       "packageUri": "lib/",
-      "languageVersion": "2.1"
+      "languageVersion": "2.2"
     }
   ],
-  "generated": "2022-06-05T11:16:44.947483Z",
+  "generated": "2022-06-05T12:27:38.419081Z",
   "generator": "pub",
   "generatorVersion": "2.16.2"
 }

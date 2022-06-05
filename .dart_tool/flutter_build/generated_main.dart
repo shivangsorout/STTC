@@ -3,7 +3,7 @@
 // This file is generated from template in file `flutter_tools/lib/src/flutter_plugins.dart`.
 //
 
-// @dart = 2.1
+// @dart = 2.2
 
 // When `package:STTC_NOTEPAD/main.dart` defines `main`, that definition is shadowed by the definition below.
 export 'package:STTC_NOTEPAD/main.dart';
