@@ -1,44 +1,45 @@
 -- Merging decision tree log ---
 application
-INJECTED from I:\Flutter\STTC\android\app\src\main\AndroidManifest.xml:12:5-35:19
-MERGED from [androidx.window:window:1.0.0-beta04] C:\Users\shivang\.gradle\caches\transforms-2\files-2.1\091a7e001e66dbf0c2a23c27c611e3ec\window-1.0.0-beta04\AndroidManifest.xml:24:5-31:19
-MERGED from [androidx.window:window:1.0.0-beta04] C:\Users\shivang\.gradle\caches\transforms-2\files-2.1\091a7e001e66dbf0c2a23c27c611e3ec\window-1.0.0-beta04\AndroidManifest.xml:24:5-31:19
-MERGED from [androidx.core:core:1.6.0] C:\Users\shivang\.gradle\caches\transforms-2\files-2.1\c548f78b97a7194ace6b4e7cc682fd47\core-1.6.0\AndroidManifest.xml:24:5-89
-MERGED from [androidx.core:core:1.6.0] C:\Users\shivang\.gradle\caches\transforms-2\files-2.1\c548f78b97a7194ace6b4e7cc682fd47\core-1.6.0\AndroidManifest.xml:24:5-89
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\shivang\.gradle\caches\transforms-2\files-2.1\273b30fa0bc6f7ca05c7bdbd45b111ee\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\shivang\.gradle\caches\transforms-2\files-2.1\273b30fa0bc6f7ca05c7bdbd45b111ee\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
+INJECTED from I:\Flutter\STTC\android\app\src\main\AndroidManifest.xml:19:5-42:19
+MERGED from [androidx.window:window:1.0.0-beta04] C:\Users\shivang\.gradle\caches\transforms-2\files-2.1\e18f290dcfb2d5f7138cf4d3f43c8510\window-1.0.0-beta04\AndroidManifest.xml:24:5-31:19
+MERGED from [androidx.window:window:1.0.0-beta04] C:\Users\shivang\.gradle\caches\transforms-2\files-2.1\e18f290dcfb2d5f7138cf4d3f43c8510\window-1.0.0-beta04\AndroidManifest.xml:24:5-31:19
+MERGED from [androidx.core:core:1.6.0] C:\Users\shivang\.gradle\caches\transforms-2\files-2.1\40487d61cf9cced715b80913d04b44a8\core-1.6.0\AndroidManifest.xml:24:5-89
+MERGED from [androidx.core:core:1.6.0] C:\Users\shivang\.gradle\caches\transforms-2\files-2.1\40487d61cf9cced715b80913d04b44a8\core-1.6.0\AndroidManifest.xml:24:5-89
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\shivang\.gradle\caches\transforms-2\files-2.1\3487009f4c2c6ed9662ce87603dceb5f\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\shivang\.gradle\caches\transforms-2\files-2.1\3487009f4c2c6ed9662ce87603dceb5f\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
 	android:appComponentFactory
-		ADDED from [androidx.core:core:1.6.0] C:\Users\shivang\.gradle\caches\transforms-2\files-2.1\c548f78b97a7194ace6b4e7cc682fd47\core-1.6.0\AndroidManifest.xml:24:18-86
+		ADDED from [androidx.core:core:1.6.0] C:\Users\shivang\.gradle\caches\transforms-2\files-2.1\40487d61cf9cced715b80913d04b44a8\core-1.6.0\AndroidManifest.xml:24:18-86
 	android:name
 		INJECTED from I:\Flutter\STTC\android\app\src\main\AndroidManifest.xml
 manifest
-ADDED from I:\Flutter\STTC\android\app\src\main\AndroidManifest.xml:1:1-36:12
-INJECTED from I:\Flutter\STTC\android\app\src\main\AndroidManifest.xml:1:1-36:12
-INJECTED from I:\Flutter\STTC\android\app\src\main\AndroidManifest.xml:1:1-36:12
-INJECTED from I:\Flutter\STTC\android\app\src\main\AndroidManifest.xml:1:1-36:12
-MERGED from I:\Flutter\STTC\android\app\src\main\AndroidManifest.xml:1:1-36:12
+ADDED from I:\Flutter\STTC\android\app\src\main\AndroidManifest.xml:1:1-43:12
+INJECTED from I:\Flutter\STTC\android\app\src\main\AndroidManifest.xml:1:1-43:12
+INJECTED from I:\Flutter\STTC\android\app\src\main\AndroidManifest.xml:1:1-43:12
+INJECTED from I:\Flutter\STTC\android\app\src\main\AndroidManifest.xml:1:1-43:12
+MERGED from I:\Flutter\STTC\android\app\src\main\AndroidManifest.xml:1:1-43:12
 MERGED from [:shared_preferences_android] I:\Flutter\STTC\build\shared_preferences_android\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-7:12
 MERGED from [:permission_handler_android] I:\Flutter\STTC\build\permission_handler_android\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-7:12
+MERGED from [:app_settings] I:\Flutter\STTC\build\app_settings\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-7:12
 MERGED from [:sqflite] I:\Flutter\STTC\build\sqflite\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-7:12
 MERGED from [:speech_recognition] I:\Flutter\STTC\build\speech_recognition\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-9:12
 MERGED from [:path_provider_android] I:\Flutter\STTC\build\path_provider_android\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-7:12
-MERGED from [androidx.window:window-java:1.0.0-beta04] C:\Users\shivang\.gradle\caches\transforms-2\files-2.1\2d61c520698954441cea49fcd0d80f76\window-java-1.0.0-beta04\AndroidManifest.xml:17:1-23:12
-MERGED from [androidx.window:window:1.0.0-beta04] C:\Users\shivang\.gradle\caches\transforms-2\files-2.1\091a7e001e66dbf0c2a23c27c611e3ec\window-1.0.0-beta04\AndroidManifest.xml:17:1-33:12
-MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\shivang\.gradle\caches\transforms-2\files-2.1\9e324cb3b0e751d790f45c51ef96a80d\fragment-1.1.0\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\shivang\.gradle\caches\transforms-2\files-2.1\65b55abd2acc55a6421f97786b139061\viewpager-1.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.loader:loader:1.0.0] C:\Users\shivang\.gradle\caches\transforms-2\files-2.1\af84c7c10e98dacd22c4585b6ebb6dc0\loader-1.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.activity:activity:1.0.0] C:\Users\shivang\.gradle\caches\transforms-2\files-2.1\b9e73ba1c6aeb2e48239bd4c2082c84d\activity-1.0.0\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.customview:customview:1.0.0] C:\Users\shivang\.gradle\caches\transforms-2\files-2.1\7d89eabe1b10824cb996231b17391658\customview-1.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.core:core:1.6.0] C:\Users\shivang\.gradle\caches\transforms-2\files-2.1\c548f78b97a7194ace6b4e7cc682fd47\core-1.6.0\AndroidManifest.xml:17:1-26:12
-MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] C:\Users\shivang\.gradle\caches\transforms-2\files-2.1\782d9b886fbb38d9617284f0642febba\lifecycle-runtime-2.2.0\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\shivang\.gradle\caches\transforms-2\files-2.1\2b6092f098265068fc924c48d3537c6e\savedstate-1.0.0\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\shivang\.gradle\caches\transforms-2\files-2.1\edccbb6763182b194f8a51fbcac3ba63\lifecycle-livedata-2.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\shivang\.gradle\caches\transforms-2\files-2.1\e02eaa92821abc08e1c909186f702310\lifecycle-livedata-core-2.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\shivang\.gradle\caches\transforms-2\files-2.1\237be84b3f9e92e2437a326c17b991f2\tracing-1.0.0\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\shivang\.gradle\caches\transforms-2\files-2.1\125f0c856b23962d4b1f892264f36dc4\core-runtime-2.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\shivang\.gradle\caches\transforms-2\files-2.1\273b30fa0bc6f7ca05c7bdbd45b111ee\versionedparcelable-1.1.1\AndroidManifest.xml:17:1-27:12
-MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] C:\Users\shivang\.gradle\caches\transforms-2\files-2.1\0dbca1c1ca9e336992be87f93801d27e\lifecycle-viewmodel-2.1.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\shivang\.gradle\caches\transforms-2\files-2.1\88cc61aab5d1d8add02e381878c8d7b4\annotation-experimental-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.window:window-java:1.0.0-beta04] C:\Users\shivang\.gradle\caches\transforms-2\files-2.1\01c294fe23c16253179a1844f7aaed79\window-java-1.0.0-beta04\AndroidManifest.xml:17:1-23:12
+MERGED from [androidx.window:window:1.0.0-beta04] C:\Users\shivang\.gradle\caches\transforms-2\files-2.1\e18f290dcfb2d5f7138cf4d3f43c8510\window-1.0.0-beta04\AndroidManifest.xml:17:1-33:12
+MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\shivang\.gradle\caches\transforms-2\files-2.1\6983815f272ba603c260e27a9f90484b\fragment-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\shivang\.gradle\caches\transforms-2\files-2.1\e4ee504df123fb9a7317bb46ecbceb68\viewpager-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\shivang\.gradle\caches\transforms-2\files-2.1\c568e01424c64cb2f6c89bba4baadf91\loader-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.activity:activity:1.0.0] C:\Users\shivang\.gradle\caches\transforms-2\files-2.1\b0ed960d1fb4457685a912e8c7476be8\activity-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\shivang\.gradle\caches\transforms-2\files-2.1\9a52861196a459bd63c1f64258e7cc66\customview-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.core:core:1.6.0] C:\Users\shivang\.gradle\caches\transforms-2\files-2.1\40487d61cf9cced715b80913d04b44a8\core-1.6.0\AndroidManifest.xml:17:1-26:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] C:\Users\shivang\.gradle\caches\transforms-2\files-2.1\385d4316783e16602ef8838b0c36d1f2\lifecycle-runtime-2.2.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\shivang\.gradle\caches\transforms-2\files-2.1\ab5c01b860adc74f11de27cad3602020\savedstate-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\shivang\.gradle\caches\transforms-2\files-2.1\c325e07847f22f2fde6384818d630e1a\lifecycle-livedata-2.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\shivang\.gradle\caches\transforms-2\files-2.1\06c8f3ff8518674a0d9d8f9d497ba895\lifecycle-livedata-core-2.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\shivang\.gradle\caches\transforms-2\files-2.1\cc4049b28baf284f44170d8cc556e34e\tracing-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\shivang\.gradle\caches\transforms-2\files-2.1\829859f96552555ef07ca8507a41388e\core-runtime-2.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\shivang\.gradle\caches\transforms-2\files-2.1\3487009f4c2c6ed9662ce87603dceb5f\versionedparcelable-1.1.1\AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] C:\Users\shivang\.gradle\caches\transforms-2\files-2.1\0f125cbefc2362f6c077919a1250bf05\lifecycle-viewmodel-2.1.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\shivang\.gradle\caches\transforms-2\files-2.1\186d5dcbd91350f3c96406623da59d27\annotation-experimental-1.1.0\AndroidManifest.xml:17:1-24:12
 INJECTED from I:\Flutter\STTC\android\app\src\debug\AndroidManifest.xml:1:1-7:12
 INJECTED from I:\Flutter\STTC\android\app\src\debug\AndroidManifest.xml:1:1-7:12
 INJECTED from I:\Flutter\STTC\android\app\src\debug\AndroidManifest.xml:1:1-7:12
@@ -48,11 +49,11 @@ INJECTED from I:\Flutter\STTC\android\app\src\debug\AndroidManifest.xml:1:1-7:12
 		INJECTED from I:\Flutter\STTC\android\app\src\debug\AndroidManifest.xml
 	android:versionName
 		INJECTED from I:\Flutter\STTC\android\app\src\main\AndroidManifest.xml
-		ADDED from I:\Flutter\STTC\android\app\src\main\AndroidManifest.xml:1:1-36:12
+		ADDED from I:\Flutter\STTC\android\app\src\main\AndroidManifest.xml:1:1-43:12
 		INJECTED from I:\Flutter\STTC\android\app\src\debug\AndroidManifest.xml
 	android:versionCode
 		INJECTED from I:\Flutter\STTC\android\app\src\main\AndroidManifest.xml
-		ADDED from I:\Flutter\STTC\android\app\src\main\AndroidManifest.xml:1:1-36:12
+		ADDED from I:\Flutter\STTC\android\app\src\main\AndroidManifest.xml:1:1-43:12
 		INJECTED from I:\Flutter\STTC\android\app\src\debug\AndroidManifest.xml
 	xmlns:android
 		ADDED from I:\Flutter\STTC\android\app\src\main\AndroidManifest.xml:1:11-69
@@ -60,12 +61,20 @@ uses-permission#android.permission.RECORD_AUDIO
 ADDED from I:\Flutter\STTC\android\app\src\main\AndroidManifest.xml:4:5-72
 	android:name
 		ADDED from I:\Flutter\STTC\android\app\src\main\AndroidManifest.xml:4:22-68
-meta-data#flutterEmbedding
-ADDED from I:\Flutter\STTC\android\app\src\main\AndroidManifest.xml:5:5-67
-	android:value
-		ADDED from I:\Flutter\STTC\android\app\src\main\AndroidManifest.xml:5:48-65
+queries
+ADDED from I:\Flutter\STTC\android\app\src\main\AndroidManifest.xml:6:5-10:15
+intent
+ADDED from I:\Flutter\STTC\android\app\src\main\AndroidManifest.xml:7:9-9:18
+action#android.speech.RecognitionService
+ADDED from I:\Flutter\STTC\android\app\src\main\AndroidManifest.xml:8:13-72
 	android:name
-		ADDED from I:\Flutter\STTC\android\app\src\main\AndroidManifest.xml:5:16-47
+		ADDED from I:\Flutter\STTC\android\app\src\main\AndroidManifest.xml:8:21-69
+meta-data#flutterEmbedding
+ADDED from I:\Flutter\STTC\android\app\src\main\AndroidManifest.xml:12:5-67
+	android:value
+		ADDED from I:\Flutter\STTC\android\app\src\main\AndroidManifest.xml:12:48-65
+	android:name
+		ADDED from I:\Flutter\STTC\android\app\src\main\AndroidManifest.xml:12:16-47
 uses-sdk
 INJECTED from I:\Flutter\STTC\android\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from I:\Flutter\STTC\android\app\src\main\AndroidManifest.xml
@@ -74,46 +83,48 @@ MERGED from [:shared_preferences_android] I:\Flutter\STTC\build\shared_preferenc
 MERGED from [:shared_preferences_android] I:\Flutter\STTC\build\shared_preferences_android\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:permission_handler_android] I:\Flutter\STTC\build\permission_handler_android\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:permission_handler_android] I:\Flutter\STTC\build\permission_handler_android\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:app_settings] I:\Flutter\STTC\build\app_settings\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:app_settings] I:\Flutter\STTC\build\app_settings\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:sqflite] I:\Flutter\STTC\build\sqflite\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:sqflite] I:\Flutter\STTC\build\sqflite\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:speech_recognition] I:\Flutter\STTC\build\speech_recognition\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-44
 MERGED from [:speech_recognition] I:\Flutter\STTC\build\speech_recognition\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-44
 MERGED from [:path_provider_android] I:\Flutter\STTC\build\path_provider_android\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:path_provider_android] I:\Flutter\STTC\build\path_provider_android\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
-MERGED from [androidx.window:window-java:1.0.0-beta04] C:\Users\shivang\.gradle\caches\transforms-2\files-2.1\2d61c520698954441cea49fcd0d80f76\window-java-1.0.0-beta04\AndroidManifest.xml:19:5-21:41
-MERGED from [androidx.window:window-java:1.0.0-beta04] C:\Users\shivang\.gradle\caches\transforms-2\files-2.1\2d61c520698954441cea49fcd0d80f76\window-java-1.0.0-beta04\AndroidManifest.xml:19:5-21:41
-MERGED from [androidx.window:window:1.0.0-beta04] C:\Users\shivang\.gradle\caches\transforms-2\files-2.1\091a7e001e66dbf0c2a23c27c611e3ec\window-1.0.0-beta04\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.window:window:1.0.0-beta04] C:\Users\shivang\.gradle\caches\transforms-2\files-2.1\091a7e001e66dbf0c2a23c27c611e3ec\window-1.0.0-beta04\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\shivang\.gradle\caches\transforms-2\files-2.1\9e324cb3b0e751d790f45c51ef96a80d\fragment-1.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\shivang\.gradle\caches\transforms-2\files-2.1\9e324cb3b0e751d790f45c51ef96a80d\fragment-1.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\shivang\.gradle\caches\transforms-2\files-2.1\65b55abd2acc55a6421f97786b139061\viewpager-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\shivang\.gradle\caches\transforms-2\files-2.1\65b55abd2acc55a6421f97786b139061\viewpager-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.loader:loader:1.0.0] C:\Users\shivang\.gradle\caches\transforms-2\files-2.1\af84c7c10e98dacd22c4585b6ebb6dc0\loader-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.loader:loader:1.0.0] C:\Users\shivang\.gradle\caches\transforms-2\files-2.1\af84c7c10e98dacd22c4585b6ebb6dc0\loader-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.activity:activity:1.0.0] C:\Users\shivang\.gradle\caches\transforms-2\files-2.1\b9e73ba1c6aeb2e48239bd4c2082c84d\activity-1.0.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.activity:activity:1.0.0] C:\Users\shivang\.gradle\caches\transforms-2\files-2.1\b9e73ba1c6aeb2e48239bd4c2082c84d\activity-1.0.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.customview:customview:1.0.0] C:\Users\shivang\.gradle\caches\transforms-2\files-2.1\7d89eabe1b10824cb996231b17391658\customview-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.customview:customview:1.0.0] C:\Users\shivang\.gradle\caches\transforms-2\files-2.1\7d89eabe1b10824cb996231b17391658\customview-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.core:core:1.6.0] C:\Users\shivang\.gradle\caches\transforms-2\files-2.1\c548f78b97a7194ace6b4e7cc682fd47\core-1.6.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.core:core:1.6.0] C:\Users\shivang\.gradle\caches\transforms-2\files-2.1\c548f78b97a7194ace6b4e7cc682fd47\core-1.6.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] C:\Users\shivang\.gradle\caches\transforms-2\files-2.1\782d9b886fbb38d9617284f0642febba\lifecycle-runtime-2.2.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] C:\Users\shivang\.gradle\caches\transforms-2\files-2.1\782d9b886fbb38d9617284f0642febba\lifecycle-runtime-2.2.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\shivang\.gradle\caches\transforms-2\files-2.1\2b6092f098265068fc924c48d3537c6e\savedstate-1.0.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\shivang\.gradle\caches\transforms-2\files-2.1\2b6092f098265068fc924c48d3537c6e\savedstate-1.0.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\shivang\.gradle\caches\transforms-2\files-2.1\edccbb6763182b194f8a51fbcac3ba63\lifecycle-livedata-2.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\shivang\.gradle\caches\transforms-2\files-2.1\edccbb6763182b194f8a51fbcac3ba63\lifecycle-livedata-2.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\shivang\.gradle\caches\transforms-2\files-2.1\e02eaa92821abc08e1c909186f702310\lifecycle-livedata-core-2.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\shivang\.gradle\caches\transforms-2\files-2.1\e02eaa92821abc08e1c909186f702310\lifecycle-livedata-core-2.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\shivang\.gradle\caches\transforms-2\files-2.1\237be84b3f9e92e2437a326c17b991f2\tracing-1.0.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\shivang\.gradle\caches\transforms-2\files-2.1\237be84b3f9e92e2437a326c17b991f2\tracing-1.0.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\shivang\.gradle\caches\transforms-2\files-2.1\125f0c856b23962d4b1f892264f36dc4\core-runtime-2.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\shivang\.gradle\caches\transforms-2\files-2.1\125f0c856b23962d4b1f892264f36dc4\core-runtime-2.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\shivang\.gradle\caches\transforms-2\files-2.1\273b30fa0bc6f7ca05c7bdbd45b111ee\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\shivang\.gradle\caches\transforms-2\files-2.1\273b30fa0bc6f7ca05c7bdbd45b111ee\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] C:\Users\shivang\.gradle\caches\transforms-2\files-2.1\0dbca1c1ca9e336992be87f93801d27e\lifecycle-viewmodel-2.1.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] C:\Users\shivang\.gradle\caches\transforms-2\files-2.1\0dbca1c1ca9e336992be87f93801d27e\lifecycle-viewmodel-2.1.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\shivang\.gradle\caches\transforms-2\files-2.1\88cc61aab5d1d8add02e381878c8d7b4\annotation-experimental-1.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\shivang\.gradle\caches\transforms-2\files-2.1\88cc61aab5d1d8add02e381878c8d7b4\annotation-experimental-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.window:window-java:1.0.0-beta04] C:\Users\shivang\.gradle\caches\transforms-2\files-2.1\01c294fe23c16253179a1844f7aaed79\window-java-1.0.0-beta04\AndroidManifest.xml:19:5-21:41
+MERGED from [androidx.window:window-java:1.0.0-beta04] C:\Users\shivang\.gradle\caches\transforms-2\files-2.1\01c294fe23c16253179a1844f7aaed79\window-java-1.0.0-beta04\AndroidManifest.xml:19:5-21:41
+MERGED from [androidx.window:window:1.0.0-beta04] C:\Users\shivang\.gradle\caches\transforms-2\files-2.1\e18f290dcfb2d5f7138cf4d3f43c8510\window-1.0.0-beta04\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.window:window:1.0.0-beta04] C:\Users\shivang\.gradle\caches\transforms-2\files-2.1\e18f290dcfb2d5f7138cf4d3f43c8510\window-1.0.0-beta04\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\shivang\.gradle\caches\transforms-2\files-2.1\6983815f272ba603c260e27a9f90484b\fragment-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\shivang\.gradle\caches\transforms-2\files-2.1\6983815f272ba603c260e27a9f90484b\fragment-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\shivang\.gradle\caches\transforms-2\files-2.1\e4ee504df123fb9a7317bb46ecbceb68\viewpager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\shivang\.gradle\caches\transforms-2\files-2.1\e4ee504df123fb9a7317bb46ecbceb68\viewpager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\shivang\.gradle\caches\transforms-2\files-2.1\c568e01424c64cb2f6c89bba4baadf91\loader-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\shivang\.gradle\caches\transforms-2\files-2.1\c568e01424c64cb2f6c89bba4baadf91\loader-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity:1.0.0] C:\Users\shivang\.gradle\caches\transforms-2\files-2.1\b0ed960d1fb4457685a912e8c7476be8\activity-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity:1.0.0] C:\Users\shivang\.gradle\caches\transforms-2\files-2.1\b0ed960d1fb4457685a912e8c7476be8\activity-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\shivang\.gradle\caches\transforms-2\files-2.1\9a52861196a459bd63c1f64258e7cc66\customview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\shivang\.gradle\caches\transforms-2\files-2.1\9a52861196a459bd63c1f64258e7cc66\customview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.6.0] C:\Users\shivang\.gradle\caches\transforms-2\files-2.1\40487d61cf9cced715b80913d04b44a8\core-1.6.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.6.0] C:\Users\shivang\.gradle\caches\transforms-2\files-2.1\40487d61cf9cced715b80913d04b44a8\core-1.6.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] C:\Users\shivang\.gradle\caches\transforms-2\files-2.1\385d4316783e16602ef8838b0c36d1f2\lifecycle-runtime-2.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] C:\Users\shivang\.gradle\caches\transforms-2\files-2.1\385d4316783e16602ef8838b0c36d1f2\lifecycle-runtime-2.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\shivang\.gradle\caches\transforms-2\files-2.1\ab5c01b860adc74f11de27cad3602020\savedstate-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\shivang\.gradle\caches\transforms-2\files-2.1\ab5c01b860adc74f11de27cad3602020\savedstate-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\shivang\.gradle\caches\transforms-2\files-2.1\c325e07847f22f2fde6384818d630e1a\lifecycle-livedata-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\shivang\.gradle\caches\transforms-2\files-2.1\c325e07847f22f2fde6384818d630e1a\lifecycle-livedata-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\shivang\.gradle\caches\transforms-2\files-2.1\06c8f3ff8518674a0d9d8f9d497ba895\lifecycle-livedata-core-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\shivang\.gradle\caches\transforms-2\files-2.1\06c8f3ff8518674a0d9d8f9d497ba895\lifecycle-livedata-core-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\shivang\.gradle\caches\transforms-2\files-2.1\cc4049b28baf284f44170d8cc556e34e\tracing-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\shivang\.gradle\caches\transforms-2\files-2.1\cc4049b28baf284f44170d8cc556e34e\tracing-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\shivang\.gradle\caches\transforms-2\files-2.1\829859f96552555ef07ca8507a41388e\core-runtime-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\shivang\.gradle\caches\transforms-2\files-2.1\829859f96552555ef07ca8507a41388e\core-runtime-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\shivang\.gradle\caches\transforms-2\files-2.1\3487009f4c2c6ed9662ce87603dceb5f\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\shivang\.gradle\caches\transforms-2\files-2.1\3487009f4c2c6ed9662ce87603dceb5f\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] C:\Users\shivang\.gradle\caches\transforms-2\files-2.1\0f125cbefc2362f6c077919a1250bf05\lifecycle-viewmodel-2.1.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] C:\Users\shivang\.gradle\caches\transforms-2\files-2.1\0f125cbefc2362f6c077919a1250bf05\lifecycle-viewmodel-2.1.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\shivang\.gradle\caches\transforms-2\files-2.1\186d5dcbd91350f3c96406623da59d27\annotation-experimental-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\shivang\.gradle\caches\transforms-2\files-2.1\186d5dcbd91350f3c96406623da59d27\annotation-experimental-1.1.0\AndroidManifest.xml:20:5-22:41
 INJECTED from I:\Flutter\STTC\android\app\src\debug\AndroidManifest.xml
 INJECTED from I:\Flutter\STTC\android\app\src\debug\AndroidManifest.xml
 	android:targetSdkVersion
@@ -127,14 +138,14 @@ ADDED from I:\Flutter\STTC\android\app\src\debug\AndroidManifest.xml:6:5-66
 	android:name
 		ADDED from I:\Flutter\STTC\android\app\src\debug\AndroidManifest.xml:6:22-64
 uses-library#androidx.window.extensions
-ADDED from [androidx.window:window:1.0.0-beta04] C:\Users\shivang\.gradle\caches\transforms-2\files-2.1\091a7e001e66dbf0c2a23c27c611e3ec\window-1.0.0-beta04\AndroidManifest.xml:25:9-27:40
+ADDED from [androidx.window:window:1.0.0-beta04] C:\Users\shivang\.gradle\caches\transforms-2\files-2.1\e18f290dcfb2d5f7138cf4d3f43c8510\window-1.0.0-beta04\AndroidManifest.xml:25:9-27:40
 	android:required
-		ADDED from [androidx.window:window:1.0.0-beta04] C:\Users\shivang\.gradle\caches\transforms-2\files-2.1\091a7e001e66dbf0c2a23c27c611e3ec\window-1.0.0-beta04\AndroidManifest.xml:27:13-37
+		ADDED from [androidx.window:window:1.0.0-beta04] C:\Users\shivang\.gradle\caches\transforms-2\files-2.1\e18f290dcfb2d5f7138cf4d3f43c8510\window-1.0.0-beta04\AndroidManifest.xml:27:13-37
 	android:name
-		ADDED from [androidx.window:window:1.0.0-beta04] C:\Users\shivang\.gradle\caches\transforms-2\files-2.1\091a7e001e66dbf0c2a23c27c611e3ec\window-1.0.0-beta04\AndroidManifest.xml:26:13-54
+		ADDED from [androidx.window:window:1.0.0-beta04] C:\Users\shivang\.gradle\caches\transforms-2\files-2.1\e18f290dcfb2d5f7138cf4d3f43c8510\window-1.0.0-beta04\AndroidManifest.xml:26:13-54
 uses-library#androidx.window.sidecar
-ADDED from [androidx.window:window:1.0.0-beta04] C:\Users\shivang\.gradle\caches\transforms-2\files-2.1\091a7e001e66dbf0c2a23c27c611e3ec\window-1.0.0-beta04\AndroidManifest.xml:28:9-30:40
+ADDED from [androidx.window:window:1.0.0-beta04] C:\Users\shivang\.gradle\caches\transforms-2\files-2.1\e18f290dcfb2d5f7138cf4d3f43c8510\window-1.0.0-beta04\AndroidManifest.xml:28:9-30:40
 	android:required
-		ADDED from [androidx.window:window:1.0.0-beta04] C:\Users\shivang\.gradle\caches\transforms-2\files-2.1\091a7e001e66dbf0c2a23c27c611e3ec\window-1.0.0-beta04\AndroidManifest.xml:30:13-37
+		ADDED from [androidx.window:window:1.0.0-beta04] C:\Users\shivang\.gradle\caches\transforms-2\files-2.1\e18f290dcfb2d5f7138cf4d3f43c8510\window-1.0.0-beta04\AndroidManifest.xml:30:13-37
 	android:name
-		ADDED from [androidx.window:window:1.0.0-beta04] C:\Users\shivang\.gradle\caches\transforms-2\files-2.1\091a7e001e66dbf0c2a23c27c611e3ec\window-1.0.0-beta04\AndroidManifest.xml:29:13-51
+		ADDED from [androidx.window:window:1.0.0-beta04] C:\Users\shivang\.gradle\caches\transforms-2\files-2.1\e18f290dcfb2d5f7138cf4d3f43c8510\window-1.0.0-beta04\AndroidManifest.xml:29:13-51

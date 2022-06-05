@@ -37,7 +37,7 @@ class NoteListState extends State<NoteList> {
           IconButton(
             icon: Icon(Icons.help),
             onPressed: () {
-              Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (BuildContext context) => InsScreen("Go Back")));
+              Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => InsScreen("Go Back")));
             },
           ),
         ],

@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:permission_handler/permission_handler.dart';
 import 'package:speech_recognition/speech_recognition.dart';
 import 'package:STTC_NOTEPAD/models/note.dart';
-import 'package:STTC_NOTEPAD/screens/note_detail.dart';
+import 'package:app_settings/app_settings.dart';
 
 class MicScreen extends StatefulWidget {
   MicScreen();
@@ -20,19 +21,20 @@ class MicScreenState extends State<MicScreen> {
   SpeechRecognition _speechRecognition;
   bool _isAvailable = false;
   bool _isListening = false;
+  Map<Permission, PermissionStatus> permissions = {};
 
   static String resultText = "";
 
   @override
   void initState() {
     super.initState();
+    getPermission();
     initSpeechRecognizer();
   }
 
   void initSpeechRecognizer() {
     _speechRecognition = SpeechRecognition();
-    _speechRecognition.setAvailabilityHandler(
-        (bool result) => setState(() => _isAvailable = result));
+    _speechRecognition.setAvailabilityHandler((bool result) => setState(() => _isAvailable = result));
     _speechRecognition.setRecognitionStartedHandler(
       () => setState(() => _isListening = true),
     );
@@ -45,6 +47,26 @@ class MicScreenState extends State<MicScreen> {
     _speechRecognition.activate().then(
           (result) => setState(() => _isAvailable = result),
         );
+  }
+
+  Future askForPermissions() async {
+    permissions = await [Permission.microphone, Permission.speech].request();
+  }
+
+  getPermission() async {
+    await askForPermissions();
+    if (permissions[Permission.microphone].isDenied || permissions[Permission.speech].isDenied) {
+      askForPermissions();
+    }
+    if (permissions[Permission.speech].isPermanentlyDenied || permissions[Permission.microphone].isPermanentlyDenied) {
+      AppSettings.openAppSettings();
+    }
+    if (permissions[Permission.speech].isGranted && permissions[Permission.microphone].isGranted) {
+      return true;
+    } else {
+      await getPermission();
+      return false;
+    }
   }
 
   @override
@@ -61,7 +83,6 @@ class MicScreenState extends State<MicScreen> {
       ),
       backgroundColor: Colors.black,
       body: Container(
-        
           child: ListView(
         children: <Widget>[
           Padding(
@@ -93,17 +114,14 @@ class MicScreenState extends State<MicScreen> {
                   child: Icon(Icons.mic),
                   backgroundColor: Colors.pink,
                   onPressed: () {
-                    if (_isAvailable && !_isListening)
-                      _speechRecognition
-                          .listen(locale: "en_US")
-                          .then((result) => print('$result'));
+                    if (_isAvailable && !_isListening) _speechRecognition.listen(locale: "en_US").then((result) => print('RESULT: $result'));
                   },
                 ),
               ],
             ),
           ),
-          new RaisedButton(
-              color: Theme.of(context).accentColor,
+          new MaterialButton(
+              color: Theme.of(context).colorScheme.secondary,
               textColor: Colors.white,
               child: Text(
                 "Update",

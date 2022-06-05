@@ -1,18 +1,18 @@
 [
     {
         "merged": "I:\\Flutter\\STTC\\build\\shared_preferences_android\\intermediates\\res\\merged\\debug\\layout-v21\\notification_template_icon_group.xml",
-        "source": "C:\\Users\\shivang\\.gradle\\caches\\transforms-2\\files-2.1\\c548f78b97a7194ace6b4e7cc682fd47\\core-1.6.0\\res\\layout-v21\\notification_template_icon_group.xml"
+        "source": "C:\\Users\\shivang\\.gradle\\caches\\transforms-2\\files-2.1\\40487d61cf9cced715b80913d04b44a8\\core-1.6.0\\res\\layout-v21\\notification_template_icon_group.xml"
     },
     {
         "merged": "I:\\Flutter\\STTC\\build\\shared_preferences_android\\intermediates\\res\\merged\\debug\\layout-v21\\notification_template_custom_big.xml",
-        "source": "C:\\Users\\shivang\\.gradle\\caches\\transforms-2\\files-2.1\\c548f78b97a7194ace6b4e7cc682fd47\\core-1.6.0\\res\\layout-v21\\notification_template_custom_big.xml"
+        "source": "C:\\Users\\shivang\\.gradle\\caches\\transforms-2\\files-2.1\\40487d61cf9cced715b80913d04b44a8\\core-1.6.0\\res\\layout-v21\\notification_template_custom_big.xml"
     },
     {
         "merged": "I:\\Flutter\\STTC\\build\\shared_preferences_android\\intermediates\\res\\merged\\debug\\layout-v21\\notification_action_tombstone.xml",
-        "source": "C:\\Users\\shivang\\.gradle\\caches\\transforms-2\\files-2.1\\c548f78b97a7194ace6b4e7cc682fd47\\core-1.6.0\\res\\layout-v21\\notification_action_tombstone.xml"
+        "source": "C:\\Users\\shivang\\.gradle\\caches\\transforms-2\\files-2.1\\40487d61cf9cced715b80913d04b44a8\\core-1.6.0\\res\\layout-v21\\notification_action_tombstone.xml"
     },
     {
         "merged": "I:\\Flutter\\STTC\\build\\shared_preferences_android\\intermediates\\res\\merged\\debug\\layout-v21\\notification_action.xml",
-        "source": "C:\\Users\\shivang\\.gradle\\caches\\transforms-2\\files-2.1\\c548f78b97a7194ace6b4e7cc682fd47\\core-1.6.0\\res\\layout-v21\\notification_action.xml"
+        "source": "C:\\Users\\shivang\\.gradle\\caches\\transforms-2\\files-2.1\\40487d61cf9cced715b80913d04b44a8\\core-1.6.0\\res\\layout-v21\\notification_action.xml"
     }
 ]
