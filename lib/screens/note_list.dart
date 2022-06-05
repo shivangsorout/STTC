@@ -19,9 +19,6 @@ class NoteList extends StatefulWidget {
 }
 
 class NoteListState extends State<NoteList> {
-
-
-
   DatabaseHelper databaseHelper = DatabaseHelper();
   List<Note> noteList;
   int count = 0;
@@ -37,13 +34,13 @@ class NoteListState extends State<NoteList> {
       appBar: AppBar(
         title: Text('Notes'),
         actions: <Widget>[
-           IconButton(
-              icon: Icon(Icons.help),
-              onPressed: () {
-                Navigator.of(context).pushReplacement(MaterialPageRoute(
-            builder: (BuildContext context) => InsScreen("Go Back")));
-              },
-           ),],
+          IconButton(
+            icon: Icon(Icons.help),
+            onPressed: () {
+              Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (BuildContext context) => InsScreen("Go Back")));
+            },
+          ),
+        ],
       ),
       body: getNoteListView(),
       backgroundColor: Colors.black,
@@ -59,7 +56,7 @@ class NoteListState extends State<NoteList> {
   }
 
   ListView getNoteListView() {
-    TextStyle titleStyle = Theme.of(context).textTheme.subhead;
+    TextStyle titleStyle = Theme.of(context).textTheme.subtitle1;
 
     return ListView.builder(
         itemCount: count,
@@ -69,8 +66,7 @@ class NoteListState extends State<NoteList> {
             elevation: 2.0,
             child: ListTile(
               leading: CircleAvatar(
-                backgroundColor:
-                    getPriorityColor(this.noteList[position].priority),
+                backgroundColor: getPriorityColor(this.noteList[position].priority),
                 child: getPriorityIcon(this.noteList[position].priority),
               ),
               title: Text(
@@ -136,8 +132,7 @@ class NoteListState extends State<NoteList> {
   }
 
   void navigateToDetail(Note note, String title) async {
-    bool result =
-        await Navigator.push(context, MaterialPageRoute(builder: (context) {
+    bool result = await Navigator.push(context, MaterialPageRoute(builder: (context) {
       return NoteDetail(note, title);
     }));
 

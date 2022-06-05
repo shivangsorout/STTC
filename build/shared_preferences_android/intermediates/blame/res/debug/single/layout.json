@@ -1,0 +1,26 @@
+[
+    {
+        "merged": "I:\\Flutter\\STTC\\build\\shared_preferences_android\\intermediates\\res\\merged\\debug\\layout\\notification_action.xml",
+        "source": "C:\\Users\\shivang\\.gradle\\caches\\transforms-2\\files-2.1\\c548f78b97a7194ace6b4e7cc682fd47\\core-1.6.0\\res\\layout\\notification_action.xml"
+    },
+    {
+        "merged": "I:\\Flutter\\STTC\\build\\shared_preferences_android\\intermediates\\res\\merged\\debug\\layout\\notification_template_icon_group.xml",
+        "source": "C:\\Users\\shivang\\.gradle\\caches\\transforms-2\\files-2.1\\c548f78b97a7194ace6b4e7cc682fd47\\core-1.6.0\\res\\layout\\notification_template_icon_group.xml"
+    },
+    {
+        "merged": "I:\\Flutter\\STTC\\build\\shared_preferences_android\\intermediates\\res\\merged\\debug\\layout\\notification_template_part_time.xml",
+        "source": "C:\\Users\\shivang\\.gradle\\caches\\transforms-2\\files-2.1\\c548f78b97a7194ace6b4e7cc682fd47\\core-1.6.0\\res\\layout\\notification_template_part_time.xml"
+    },
+    {
+        "merged": "I:\\Flutter\\STTC\\build\\shared_preferences_android\\intermediates\\res\\merged\\debug\\layout\\notification_action_tombstone.xml",
+        "source": "C:\\Users\\shivang\\.gradle\\caches\\transforms-2\\files-2.1\\c548f78b97a7194ace6b4e7cc682fd47\\core-1.6.0\\res\\layout\\notification_action_tombstone.xml"
+    },
+    {
+        "merged": "I:\\Flutter\\STTC\\build\\shared_preferences_android\\intermediates\\res\\merged\\debug\\layout\\custom_dialog.xml",
+        "source": "C:\\Users\\shivang\\.gradle\\caches\\transforms-2\\files-2.1\\c548f78b97a7194ace6b4e7cc682fd47\\core-1.6.0\\res\\layout\\custom_dialog.xml"
+    },
+    {
+        "merged": "I:\\Flutter\\STTC\\build\\shared_preferences_android\\intermediates\\res\\merged\\debug\\layout\\notification_template_part_chronometer.xml",
+        "source": "C:\\Users\\shivang\\.gradle\\caches\\transforms-2\\files-2.1\\c548f78b97a7194ace6b4e7cc682fd47\\core-1.6.0\\res\\layout\\notification_template_part_chronometer.xml"
+    }
+]

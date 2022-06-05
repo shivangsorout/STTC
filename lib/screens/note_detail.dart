@@ -33,7 +33,7 @@ class _NoteDetailState extends State<NoteDetail> {
   _NoteDetailState(this.note, this.AppBarTitle);
   @override
   Widget build(BuildContext context) {
-    TextStyle textStyle = Theme.of(context).textTheme.title;
+    TextStyle textStyle = Theme.of(context).textTheme.headline6;
 
     titleController.text = note.title;
     descriptionController.text = note.description;
@@ -54,15 +54,12 @@ class _NoteDetailState extends State<NoteDetail> {
             child: Padding(
               padding: EdgeInsets.only(top: 15.0, left: 10.0, right: 10.0),
               child: getBody(textStyle),
-            ))
-            );
+            )));
   }
 
   ListView getBody(TextStyle textStyle) {
-
     return ListView(
       children: <Widget>[
-        
         //First element
         ListTile(
             title: DropdownButton(
@@ -72,8 +69,7 @@ class _NoteDetailState extends State<NoteDetail> {
               child: Text(item),
             );
           }).toList(),
-          onChanged: (MicScreenState.resultText.length == 0 &&
-                  descriptionController.text.length == 0)
+          onChanged: (MicScreenState.resultText.length == 0 && descriptionController.text.length == 0)
               ? null
               : (valueSelectedByUser) {
                   setState(() {
@@ -82,27 +78,22 @@ class _NoteDetailState extends State<NoteDetail> {
                   });
                 },
           value: getStringPriority(note.priority),
-          style: TextStyle(color: Colors.white,fontSize: 25,backgroundColor: Colors.black),
+          style: TextStyle(color: Colors.white, fontSize: 25, backgroundColor: Colors.black),
         )),
 
         //Second element
         Padding(
             padding: EdgeInsets.only(top: 15.0, bottom: 15.0),
             child: TextFormField(
-              enabled: (MicScreenState.resultText.length == 0 &&
-                      descriptionController.text.length == 0)
-                  ? false
-                  : true,
+              enabled: (MicScreenState.resultText.length == 0 && descriptionController.text.length == 0) ? false : true,
               controller: titleController,
-              style: TextStyle(color: Colors.white,fontSize: 25),
+              style: TextStyle(color: Colors.white, fontSize: 25),
               validator: getValidator(),
               decoration: InputDecoration(
                   labelText: "Title",
-                  labelStyle: TextStyle(color: Colors.white,fontSize: 20),
+                  labelStyle: TextStyle(color: Colors.white, fontSize: 20),
                   errorStyle: TextStyle(color: Colors.red, fontSize: 15.0),
-                  enabledBorder: OutlineInputBorder(
-                    borderSide: const BorderSide(color: Colors.deepPurple),
-                      borderRadius: BorderRadius.circular(15.0))),
+                  enabledBorder: OutlineInputBorder(borderSide: const BorderSide(color: Colors.deepPurple), borderRadius: BorderRadius.circular(15.0))),
             )),
 
         //Third element
@@ -111,45 +102,37 @@ class _NoteDetailState extends State<NoteDetail> {
           child: TextField(
             keyboardType: TextInputType.multiline,
             maxLines: null,
-            enabled: (MicScreenState.resultText.length == 0 &&
-                    descriptionController.text.length == 0)
-                ? false
-                : true,
+            enabled: (MicScreenState.resultText.length == 0 && descriptionController.text.length == 0) ? false : true,
             controller: descriptionController,
-            style: TextStyle(color: Colors.white,fontSize: 25),
+            style: TextStyle(color: Colors.white, fontSize: 25),
             onChanged: (value) {
               debugPrint("Description has changed");
               updateDescription();
             },
             decoration: InputDecoration(
                 labelText: "Description",
-                labelStyle: TextStyle(color: Colors.white,fontSize: 20),
-                enabledBorder: OutlineInputBorder(
-                  borderSide: BorderSide(color: Colors.deepPurple),
-                    borderRadius: BorderRadius.circular(15.0))),
+                labelStyle: TextStyle(color: Colors.white, fontSize: 20),
+                enabledBorder: OutlineInputBorder(borderSide: BorderSide(color: Colors.deepPurple), borderRadius: BorderRadius.circular(15.0))),
           ),
         ),
 
         //Fourth element
         Padding(
             padding: EdgeInsets.only(top: 15.0, bottom: 15.0),
-            child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                crossAxisAlignment: CrossAxisAlignment.end,
-                children: <Widget>[
-                  FloatingActionButton(
-                    heroTag: 'btn2',
-                    child: Icon(Icons.mic),
-                    backgroundColor: Colors.red,
-                    onPressed: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (BuildContext context) => MicScreen(),
-                          ));
-                    },
-                  ),
-                ])),
+            child: Row(mainAxisAlignment: MainAxisAlignment.spaceAround, crossAxisAlignment: CrossAxisAlignment.end, children: <Widget>[
+              FloatingActionButton(
+                heroTag: 'btn2',
+                child: Icon(Icons.mic),
+                backgroundColor: Colors.red,
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (BuildContext context) => MicScreen(),
+                      ));
+                },
+              ),
+            ])),
 
         //Fifth element
         Padding(
@@ -161,8 +144,7 @@ class _NoteDetailState extends State<NoteDetail> {
                 "Update Description",
                 textScaleFactor: 1.5,
               ),
-              onPressed: (MicScreenState.resultText.length == 0 &&
-                      descriptionController.text.length == 0)
+              onPressed: (MicScreenState.resultText.length == 0 && descriptionController.text.length == 0)
                   ? null
                   : () {
                       debugPrint("Update pressed");
@@ -187,8 +169,7 @@ class _NoteDetailState extends State<NoteDetail> {
                           "Save",
                           textScaleFactor: 1.5,
                         ),
-                        onPressed: (MicScreenState.resultText.length == 0 &&
-                                descriptionController.text.length == 0)
+                        onPressed: (MicScreenState.resultText.length == 0 && descriptionController.text.length == 0)
                             ? null
                             : () {
                                 debugPrint("Saved pressed");
@@ -207,14 +188,12 @@ class _NoteDetailState extends State<NoteDetail> {
                           "Delete",
                           textScaleFactor: 1.5,
                         ),
-                        onPressed: (MicScreenState.resultText.length == 0 &&
-                                descriptionController.text.length == 0)
+                        onPressed: (MicScreenState.resultText.length == 0 && descriptionController.text.length == 0)
                             ? null
                             : () {
                                 debugPrint("Delete pressed");
                                 _delete();
-                              }
-                              )),
+                              })),
               ],
             ))
       ],

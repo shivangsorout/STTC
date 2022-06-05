@@ -1,0 +1,10 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="bz.rxla.flutter.speechrecognition"
+4    android:versionCode="1"
+5    android:versionName="0.0.1" >
+6
+7    <uses-sdk android:minSdkVersion="14" />
+7-->C:\Flutter\flutter\.pub-cache\hosted\pub.dartlang.org\speech_recognition-0.3.0+1\android\src\main\AndroidManifest.xml
+8
+9</manifest>

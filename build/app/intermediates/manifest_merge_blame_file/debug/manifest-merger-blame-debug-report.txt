@@ -1,0 +1,80 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.notepad"
+4    android:versionCode="1"
+5    android:versionName="1.0.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="16"
+9        android:targetSdkVersion="31" />
+10    <!--
+11         Flutter needs it to communicate with the running application
+12         to allow setting breakpoints, to provide hot reload, etc.
+13    -->
+14    <uses-permission android:name="android.permission.INTERNET" />
+14-->I:\Flutter\STTC\android\app\src\debug\AndroidManifest.xml:6:5-66
+14-->I:\Flutter\STTC\android\app\src\debug\AndroidManifest.xml:6:22-64
+15    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+15-->I:\Flutter\STTC\android\app\src\main\AndroidManifest.xml:4:5-72
+15-->I:\Flutter\STTC\android\app\src\main\AndroidManifest.xml:4:22-68
+16
+17    <meta-data
+17-->I:\Flutter\STTC\android\app\src\main\AndroidManifest.xml:5:5-67
+18        android:name="flutterEmbedding"
+18-->I:\Flutter\STTC\android\app\src\main\AndroidManifest.xml:5:16-47
+19        android:value="2" />
+19-->I:\Flutter\STTC\android\app\src\main\AndroidManifest.xml:5:48-65
+20    <!--
+21 io.flutter.app.FlutterApplication is an android.app.Application that
+22         calls FlutterMain.startInitialization(this); in its onCreate method.
+23         In most cases you can leave this as-is, but you if you want to provide
+24         additional functionality it is fine to subclass or reimplement
+25         FlutterApplication and put your custom class here.
+26    -->
+27    <application
+28        android:name="android.app.Application"
+29        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+29-->[androidx.core:core:1.6.0] C:\Users\shivang\.gradle\caches\transforms-2\files-2.1\c548f78b97a7194ace6b4e7cc682fd47\core-1.6.0\AndroidManifest.xml:24:18-86
+30        android:debuggable="true"
+31        android:icon="@mipmap/ic_launcher"
+32        android:label="STTC NOTEPAD" >
+33        <activity
+34            android:name="com.example.notepad.MainActivity"
+35            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+36            android:hardwareAccelerated="true"
+37            android:launchMode="singleTop"
+38            android:theme="@style/LaunchTheme"
+39            android:windowSoftInputMode="adjustResize" >
+40
+41            <!--
+42                 This keeps the window background of the activity showing
+43                 until Flutter renders its first frame. It can be removed if
+44                 there is no splash screen (such as the default splash screen
+45                 defined in @style/LaunchTheme).
+46            -->
+47            <meta-data
+48                android:name="io.flutter.app.android.SplashScreenUntilFirstFrame"
+49                android:value="true" />
+50
+51            <intent-filter>
+52                <action android:name="android.intent.action.MAIN" />
+53
+54                <category android:name="android.intent.category.LAUNCHER" />
+55            </intent-filter>
+56        </activity>
+57
+58        <uses-library
+58-->[androidx.window:window:1.0.0-beta04] C:\Users\shivang\.gradle\caches\transforms-2\files-2.1\091a7e001e66dbf0c2a23c27c611e3ec\window-1.0.0-beta04\AndroidManifest.xml:25:9-27:40
+59            android:name="androidx.window.extensions"
+59-->[androidx.window:window:1.0.0-beta04] C:\Users\shivang\.gradle\caches\transforms-2\files-2.1\091a7e001e66dbf0c2a23c27c611e3ec\window-1.0.0-beta04\AndroidManifest.xml:26:13-54
+60            android:required="false" />
+60-->[androidx.window:window:1.0.0-beta04] C:\Users\shivang\.gradle\caches\transforms-2\files-2.1\091a7e001e66dbf0c2a23c27c611e3ec\window-1.0.0-beta04\AndroidManifest.xml:27:13-37
+61        <uses-library
+61-->[androidx.window:window:1.0.0-beta04] C:\Users\shivang\.gradle\caches\transforms-2\files-2.1\091a7e001e66dbf0c2a23c27c611e3ec\window-1.0.0-beta04\AndroidManifest.xml:28:9-30:40
+62            android:name="androidx.window.sidecar"
+62-->[androidx.window:window:1.0.0-beta04] C:\Users\shivang\.gradle\caches\transforms-2\files-2.1\091a7e001e66dbf0c2a23c27c611e3ec\window-1.0.0-beta04\AndroidManifest.xml:29:13-51
+63            android:required="false" />
+63-->[androidx.window:window:1.0.0-beta04] C:\Users\shivang\.gradle\caches\transforms-2\files-2.1\091a7e001e66dbf0c2a23c27c611e3ec\window-1.0.0-beta04\AndroidManifest.xml:30:13-37
+64    </application>
+65
+66</manifest>
