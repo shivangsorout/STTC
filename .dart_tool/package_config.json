@@ -2,6 +2,12 @@
   "configVersion": 2,
   "packages": [
     {
+      "name": "app_settings",
+      "rootUri": "file:///C:/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/app_settings-4.1.6",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "async",
       "rootUri": "file:///C:/Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/async-2.8.2",
       "packageUri": "lib/",
@@ -350,7 +356,7 @@
       "languageVersion": "2.1"
     }
   ],
-  "generated": "2022-06-05T10:02:45.713188Z",
+  "generated": "2022-06-05T11:16:44.947483Z",
   "generator": "pub",
   "generatorVersion": "2.16.2"
 }

@@ -2,6 +2,13 @@
     package="com.example.notepad">
     
     <uses-permission android:name="android.permission.RECORD_AUDIO"  />
+
+    <queries>
+        <intent>
+            <action android:name="android.speech.RecognitionService" />
+        </intent>
+    </queries>
+
     <meta-data android:name="flutterEmbedding" android:value="2"/>
 
     <!-- io.flutter.app.FlutterApplication is an android.app.Application that
