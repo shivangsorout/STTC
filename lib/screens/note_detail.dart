@@ -369,7 +369,7 @@ class _NoteDetailState extends State<NoteDetail> {
       });
     });
     _speechRecognition.setRecognitionCompleteHandler(
-      () => setState(() => _isListening = false),
+      (_) => setState(() => _isListening = false),
     );
     _speechRecognition.activate().then(
           (result) => setState(() => _isAvailable = result),

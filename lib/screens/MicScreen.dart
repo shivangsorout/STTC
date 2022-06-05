@@ -51,7 +51,7 @@ class MicScreenState extends State<MicScreen> {
       }),
     );
     _speechRecognition.setRecognitionCompleteHandler(
-      () => setState(() => _isListening = false),
+      (_) => setState(() => _isListening = false),
     );
     _speechRecognition.activate().then(
           (result) => setState(() => _isAvailable = result),

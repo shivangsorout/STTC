@@ -22,7 +22,10 @@ dependencies:
   sqflite: any
   path_provider: any
   intl: ^0.17.0
-  speech_recognition: ^0.3.0+1
+  speech_recognition:
+    git:
+        url: https://github.com/webeverde/speech_recognition.git
+        ref: master
   shared_preferences: any
   permission_handler: ^9.2.0
   app_settings: ^4.1.6
