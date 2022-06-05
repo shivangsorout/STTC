@@ -47,7 +47,7 @@ class NoteListState extends State<NoteList> {
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           debugPrint('FAB clicked');
-          navigateToDetail(Note('', '', '', 2), 'Add Note');
+          navigateToDetail(Note('', '', 0, 2), 'Add Note');
         },
         tooltip: 'Add Note',
         child: Icon(Icons.add),
@@ -59,6 +59,7 @@ class NoteListState extends State<NoteList> {
     TextStyle titleStyle = Theme.of(context).textTheme.subtitle1;
 
     return ListView.builder(
+        padding: EdgeInsets.only(top: 10, bottom: 10),
         itemCount: count,
         itemBuilder: (BuildContext context, int position) {
           return Card(
@@ -148,6 +149,12 @@ class NoteListState extends State<NoteList> {
       noteListFuture.then((noteList) {
         setState(() {
           this.noteList = noteList;
+          this.noteList.sort(
+                (a, b) => (b.time.compareTo(a.time)),
+              );
+          this.noteList.sort(
+                (a, b) => (a.priority.compareTo(b.priority)),
+              );
           this.count = noteList.length;
         });
       });

@@ -52,6 +52,7 @@ class _NoteDetailState extends State<NoteDetail> {
     setState(() {
       titleController.text = note.title;
       descriptionController.text = note.description;
+      resultText = descriptionController.text;
     });
     getPermission();
     initSpeechRecognizer();
@@ -148,6 +149,11 @@ class _NoteDetailState extends State<NoteDetail> {
             validator: getValidator('Description'),
             controller: descriptionController,
             style: TextStyle(color: Colors.white, fontSize: 18),
+            onChanged: (s) {
+              setState(() {
+                resultText = s;
+              });
+            },
             decoration: InputDecoration(
               contentPadding: EdgeInsets.symmetric(horizontal: 15, vertical: 15),
               alignLabelWithHint: true,
@@ -182,6 +188,17 @@ class _NoteDetailState extends State<NoteDetail> {
                 },
               ),
             ])),
+        if (_isListening)
+          Center(
+            child: Text(
+              'Listening...',
+              style: TextStyle(
+                fontStyle: FontStyle.italic,
+                fontSize: 16,
+                color: Colors.white,
+              ),
+            ),
+          ),
 
         //Fifth element
 
@@ -189,16 +206,16 @@ class _NoteDetailState extends State<NoteDetail> {
           padding: EdgeInsets.only(top: 15.0),
           child: NormalButton(
             title: 'Clear',
-            onPressed: descriptionController.text.isEmpty
-                ? null
-                : () {
+            onPressed: descriptionController.text.isNotEmpty && resultText.isNotEmpty
+                ? () {
                     setState(() {
                       recordedText = '';
                       resultText = '';
                       previousText = '';
                       descriptionController.text = '';
                     });
-                  },
+                  }
+                : null,
           ),
         ),
 
@@ -278,6 +295,7 @@ class _NoteDetailState extends State<NoteDetail> {
     moveToLastScreen();
 
     note.date = DateFormat.yMMMd().format(DateTime.now());
+    note.time = DateTime.now().millisecondsSinceEpoch;
 
     int result;
     if (note.id != null) {

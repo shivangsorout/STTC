@@ -3,20 +3,18 @@ class Note {
   String _title;
   String _description;
   String _date;
-  String _time;
+  int _time;
   int _priority;
 
-  Note(this._title, this._date, this._time, this._priority,
-      [this._description]);
-  Note.withId(this._id, this._title, this._date, this._time, this._priority,
-      [this._description]);
+  Note(this._title, this._date, this._time, this._priority, [this._description]);
+  Note.withId(this._id, this._title, this._date, this._time, this._priority, [this._description]);
 
   int get id => _id;
   String get title => _title;
   String get description => _description;
   int get priority => _priority;
   String get date => _date;
-  String get time => _time;
+  int get time => _time;
 
   set title(String newTitle) {
     if (newTitle.length <= 255) {
@@ -40,7 +38,7 @@ class Note {
     this._date = newDate;
   }
 
-  set time(String newTime) {
+  set time(int newTime) {
     this._time = newTime;
   }
 
@@ -64,6 +62,6 @@ class Note {
     this._description = map['description'];
     this._priority = map['priority'];
     this._date = map['date'];
-    this._time = map['time'];
+    this._time = int.parse(map['time']);
   }
 }
