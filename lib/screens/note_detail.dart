@@ -268,7 +268,7 @@ class _NoteDetailState extends State<NoteDetail> {
 
 //Update description of note object
   void updateDescription() {
-    if (resultText != null) descriptionController.text = resultText;
+    if (resultText != null && resultText != "") descriptionController.text = resultText;
     note.description = descriptionController.text;
   }
 
